@@ -15,7 +15,6 @@ public class Calculatrice {
             this.a = myObj.nextInt();  // Read user input
             System.out.println("Entree 2 : ");
             this.b = myObj.nextInt();  // Read user input
-
     }
 
     public void setOperationEnCours(Operation operationEnCours) {
