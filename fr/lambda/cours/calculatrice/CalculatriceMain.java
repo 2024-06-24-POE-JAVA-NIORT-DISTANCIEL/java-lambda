@@ -1,5 +1,7 @@
 package fr.lambda.cours.calculatrice;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Consumer;
 
 public class CalculatriceMain {
@@ -41,11 +43,20 @@ public class CalculatriceMain {
         //La ligne ci-dessus fait la même chose que celle ci-dessous
         OperationUnaire operationUnaire2 = a -> 2*a;
 
+        int nombreMagique = 42;
         Consumer<String> operationString = s -> {
-            System.out.println(s);
+            String s2 = "lkjlkj";
+            int truc = nombreMagique * 4;
+            System.out.println(s2 + s);
         };
 
+        List<String> trucs = Arrays.asList("lkjlkj", "lklkj", " ", "");
 
+        System.out.println("Affichage des éléments blancs avec une lambda classique");
+        System.out.println(trucs.stream().filter(s -> s.isBlank()).count());
+
+        System.out.println("Affichage des éléments blancs avec une référence de méthode");
+        System.out.println(trucs.stream().filter(String::isBlank).count());
 
     }
 
